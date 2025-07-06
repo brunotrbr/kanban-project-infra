@@ -1,0 +1,6 @@
+template:
+  path: apigateway.yaml
+  type: file
+parameters:
+  Name: 'kanban_project'
+  ProtocolType: 'HTTP'

@@ -1,0 +1,5 @@
+template:
+  path: vpc.yaml
+  type: file
+parameters:
+  CidrBlock: 10.0.0.0/16
