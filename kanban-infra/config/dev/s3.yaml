@@ -1,0 +1,9 @@
+template:
+  path: s3.yaml
+  type: file
+parameters:
+  BucketName: kanban.project
+  BlockPublicAcls: 'false'
+  BlockPublicPolicy: 'false'
+  IgnorePublicAcls: 'false'
+  RestrictPublicBuckets: 'false'

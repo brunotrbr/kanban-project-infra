@@ -1,0 +1,17 @@
+Parameters:
+  Name:
+    Type: String
+  ProtocolType:
+    Type: String
+Resources:
+  APIGATEWAY:
+    Type: 'AWS::ApiGatewayV2::Api'
+    Properties:
+      Name:
+        Ref: Name
+      ProtocolType:
+        Ref: ProtocolType
+Outputs:
+  ApiGatewayId:
+    Value:
+      Ref: APIGATEWAY

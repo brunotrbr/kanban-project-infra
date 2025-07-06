@@ -1,0 +1,26 @@
+Parameters:
+  BucketName:
+    Type: String
+  BlockPublicAcls:
+    Type: String
+  BlockPublicPolicy:
+    Type: String
+  IgnorePublicAcls:
+    Type: String
+  RestrictPublicBuckets:
+    Type: String
+Resources:
+  S3:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName:
+        Ref: BucketName
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls:
+          Ref: BlockPublicAcls
+        BlockPublicPolicy:
+          Ref: BlockPublicPolicy
+        IgnorePublicAcls:
+          Ref: IgnorePublicAcls
+        RestrictPublicBuckets:
+          Ref: RestrictPublicBuckets
