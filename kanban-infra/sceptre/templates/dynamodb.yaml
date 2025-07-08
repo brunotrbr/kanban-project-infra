@@ -1,0 +1,31 @@
+Parameters:
+  TableName:
+    Type: String
+  BillingMode:
+    Type: String
+  AttributeDefinitionsAttributeName:
+    Type: String
+  AttributeDefinitionsAttributeType:
+    Type: String
+  KeySchemaAttributeName:
+    Type: String
+  KeySchemaKeyType:
+    Type: String
+Resources:
+  DYNAMODB:
+    Type: 'AWS::DynamoDB::Table'
+    Properties:
+      TableName:
+        Ref: TableName
+      BillingMode:
+        Ref: BillingMode
+      AttributeDefinitions:
+        - AttributeName:
+            Ref: AttributeDefinitionsAttributeName
+          AttributeType:
+            Ref: AttributeDefinitionsAttributeType
+      KeySchema:
+        - AttributeName:
+            Ref: KeySchemaAttributeName
+          KeyType:
+            Ref: KeySchemaKeyType

@@ -1,0 +1,12 @@
+policies:
+  - name: iam-users-with-admin-access
+    resource: iam-user
+    filters:
+      - type: policy
+        key: PolicyName
+        value: AdministratorAccess
+        include-via: true
+    actions:
+    - type: set-policy
+      state: detached
+      arn: arn:aws:iam::aws:policy/AdministratorAccess

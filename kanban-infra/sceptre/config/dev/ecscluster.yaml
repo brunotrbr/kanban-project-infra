@@ -1,0 +1,7 @@
+template:
+  path: ecscluster.yaml
+  type: file
+parameters:
+  ClusterName: kanban-project
+  ClusterSettingsName: 'containerInsights'
+  ClusterSettingsValue: 'disabled'

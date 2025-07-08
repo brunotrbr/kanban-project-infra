@@ -1,0 +1,18 @@
+Parameters:
+  ClusterName:
+    Type: String
+  ClusterSettingsName:
+    Type: String
+  ClusterSettingsValue:
+    Type: String
+Resources:
+  ECSCLUSTER:
+    Type: 'AWS::ECS::Cluster'
+    Properties:
+      ClusterName:
+        Ref: ClusterName
+      ClusterSettings:
+        - Name:
+            Ref: ClusterSettingsName
+          Value:
+            Ref: ClusterSettingsValue

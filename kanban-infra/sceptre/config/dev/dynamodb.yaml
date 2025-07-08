@@ -1,0 +1,10 @@
+template:
+  path: dynamodb.yaml
+  type: file
+parameters:
+  TableName: kanban-project
+  BillingMode: 'PAY_PER_REQUEST'
+  AttributeDefinitionsAttributeName: 'id'
+  AttributeDefinitionsAttributeType: 'S'
+  KeySchemaAttributeName: 'id'
+  KeySchemaKeyType: 'HASH'
